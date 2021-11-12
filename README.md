@@ -1,2 +1,3 @@
-# -word-pdf
+# word2pdf
 简单易用的批量pdf转word的python程序
+仅需要把程序中的地址换成你要转换的word的根文件夹（可以进行大批量转换，包括子文件中的word）
