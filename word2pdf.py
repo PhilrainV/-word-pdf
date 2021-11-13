@@ -7,7 +7,10 @@ wdFormatPDF = 17
 def doc2pdf(input_file):
     word = Dispatch('Word.Application')
     doc = word.Documents.Open(input_file)
-    doc.SaveAs(input_file.replace(".doc", ".pdf"), FileFormat=wdFormatPDF)
+    if input_file.endswith(".doc"):
+        doc.SaveAs(input_file.replace(".doc", ".pdf"), FileFormat=wdFormatPDF)
+    if input_file.endswith(".docx"):
+        doc.SaveAs(input_file.replace(".docx", ".pdf"), FileFormat=wdFormatPDF)
     doc.Close()
     word.Quit()
 
